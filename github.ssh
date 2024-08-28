@@ -1,2 +1,3 @@
 #!/bin/bash
 echo "Hello Git hub"
+echo "Hello world"
