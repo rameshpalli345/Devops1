@@ -17,12 +17,12 @@ VALIDATE(){
    echo "User not have previlleged access stop execute the script"
    exit 1
 fi
-dnf list installed mysqlss
+dnf list installed mysql
 
 if [ $? -ne 0 ]
 then 
    echo "package not installed , install the package"
-   dnf install mysqlss -y
+   dnf install mysql -y
    VALIDATE $? "Installing mysql"
     
 else
