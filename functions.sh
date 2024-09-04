@@ -4,9 +4,9 @@ USERID=$(id -u)
 VALIDATE(){
     if [ $1 -ne 0 ]
     then
-    echo "$2 is .. installation failed"
+    echo "$1 is .. installation failed"
     else
-    echo "$2 is .. installation sucess"
+    echo "$1 is .. installation sucess"
     fi
 }
  if [ $USERID -ne 0 ]
