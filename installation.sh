@@ -8,7 +8,7 @@ USERID=$(id -u)
 else 
    echo "User have previlleged access proceed with the script"
 fi
-dnf list installed mysql
+dnf list install mysql
 if [ $? -ne 0 ]
 then 
    echo "package already installed"
