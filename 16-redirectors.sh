@@ -29,15 +29,15 @@ VALIDATE(){
 # for loop for multiple packages to install
  for package in $@
        do
-       dnf list installed $package
+       dnf list installed $package 
        if [ $? -ne 0 ]
 then 
-   echo "$R $package not installed , install the $package $N" &>>$LOG_FILE
+   echo -e "$R $package not installed , install the $package $N" &>>$LOG_FILE
    dnf install $package -y
    VALIDATE $? "Installing $package"
     
 else
-      echo "$Y $package already installed , nothing to do $N" &>>$LOG_FILE
+      echo -e "$Y $package already installed , nothing to do $N" &>>$LOG_FILE
     
 fi
 done
