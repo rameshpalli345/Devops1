@@ -1,8 +1,8 @@
 #!/bin/bash
 USERID=$(id -u)
 #echo " print the value $USERID"
-R="\e[32m"
-G="\e[34m"
+R="\e[31m"
+G="\e[32m"
 N="\e[0m"
 VALIDATE(){
     if [ $1 -ne 0 ]
