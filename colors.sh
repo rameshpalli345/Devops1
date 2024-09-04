@@ -2,7 +2,7 @@
 USERID=$(id -u)
 #echo " print the value $USERID"
 R="\e[32m"
-G="\e[33m"
+G="\e[34m"
 N="\e[0m"
 VALIDATE(){
     if [ $1 -ne 0 ]
@@ -17,13 +17,13 @@ VALIDATE(){
    echo "User not have previlleged access stop execute the script"
    exit 1
 fi
-dnf list installed mysql
+dnf list installed mysqlss
 
 if [ $? -ne 0 ]
 then 
    echo "package not installed , install the package"
-   dnf install mysql -y
-   VALIDATE $? "Installing Git"
+   dnf install mysqlss -y
+   VALIDATE $? "Installing mysql"
     
 else
       echo "package already installed , nothing to do"
