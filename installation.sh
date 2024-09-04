@@ -1,6 +1,6 @@
 #!/bin/bash
 USERID=$(id -u)
-if [ $USERID -eq 0]
+if [ $USERID -eq 0 ]
 then 
     echo "User have previlleged access then proceed with the script"
 else
