@@ -18,6 +18,7 @@ USAGE() {
     then 
      echo "pass the arguemnets with packages"
      exit 1
+     fi
 }
 USAGE
 R="\e[31m"
