@@ -13,6 +13,13 @@ CHECK_ROOT() {
    exit 1
    fi
 }
+USAGE() {
+    if [echo $@ -eq 0]
+    then 
+     echo "pass the arguemnets with packages"
+     exit 1
+}
+USAGE
 R="\e[31m"
 G="\e[32m"
 N="\e[0m"
