@@ -8,12 +8,12 @@ USERID=$(id -u)
 else 
    echo "User have previlleged access proceed with the script"
 fi
-dnf list installed mysql
+dnf list installed git
 
 if [ $? -ne 0 ]
 then 
    echo "package not installed , install the package"
-   dnf install mysql -y
+   dnf install git -y
     if [ $? -ne 0]
     then 
      echo "package installation successful"
