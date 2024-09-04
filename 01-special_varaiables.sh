@@ -6,4 +6,4 @@ echo "PID of current script execution: $$"
 echo "current path of the directory: $PWD"
 echo "home directory of the user : $HOME"
 sleep 100 &
-echo "PID of backgorud process: $1"
+echo "PID of backgorud process: $!"
