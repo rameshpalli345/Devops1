@@ -15,7 +15,7 @@ CHECK_ROOT() {
 }
 USAGE(){
      
-     echo "enter the details of packages"
+     echo -e "$R enter the details of packages $N" |tee -a $LOG_FILE
      exit 1
 }
 if [ $# -eq 0 ]
