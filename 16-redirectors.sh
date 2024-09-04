@@ -14,9 +14,9 @@ CHECK_ROOT() {
    fi
 }
 USAGE() {
-    if [echo "$@" -eq 0]
+    if [ $# -eq 0]
     then 
-     echo "pass the arguemnets with packages"
+     echo "pass the arguemnets with package details"
      exit 1
      fi
 }
