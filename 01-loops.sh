@@ -1,11 +1,12 @@
 #!/bin/bash
 USERID=$(id -u)
 #echo " print the value $USERID"
-CHECKROOT() {
+CHECK_ROOT() {
     if [ $USERID -ne 0 ]
     then 
    echo "User not have previlleged access stop execute the script"
    exit 1
+   fi
 }
 R="\e[31m"
 G="\e[32m"
@@ -18,8 +19,8 @@ VALIDATE(){
     echo -e "$1 is ..$G installation sucess $N"
     fi
 }
- CHECKROOT
-fi
+ CHECK_ROOT
+
 dnf list installed mysql
 
 if [ $? -ne 0 ]
