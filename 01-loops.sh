@@ -20,17 +20,18 @@ VALIDATE(){
     fi
 }
  CHECK_ROOT
-
-dnf list installed mysql
-
-if [ $? -ne 0 ]
+# for loop for multiple packages to install
+ for package in $@
+       do
+       dnf list installed $package
+       if [ $? -ne 0 ]
 then 
-   echo "package not installed , install the package"
-   dnf install mysql -y
-   VALIDATE $? "Installing mysql"
+   echo "$package not installed , install the $package"
+   dnf install $package -y
+   VALIDATE $? "Installing $package"
     
 else
-      echo "package already installed , nothing to do"
+      echo "$package already installed , nothing to do"
     
 fi
-
+done
