@@ -1,9 +1,9 @@
 #!/bin/bash
 USERID=$(id -u)
 #echo " print the value $USERID"
-CHECKROOT(){
+CHECKROOT() {
     if [ $USERID -ne 0 ]
- then 
+    then 
    echo "User not have previlleged access stop execute the script"
    exit 1
 }
