@@ -14,13 +14,14 @@ CHECK_ROOT() {
    fi
 }
 USAGE() {
-    if [ $# -eq 0 ]
-    then 
-     echo "pass the arguemnets with package details"
+     
+     echo "enter the details of packages"
      exit 1
-     fi
 }
+if [$# -eq 0]
+then
 USAGE
+fi
 R="\e[31m"
 G="\e[32m"
 N="\e[0m"
