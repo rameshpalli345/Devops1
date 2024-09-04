@@ -13,12 +13,12 @@ CHECK_ROOT() {
    exit 1
    fi
 }
-USAGE() {
+USAGE(){
      
      echo "enter the details of packages"
      exit 1
 }
-if [$# -eq 0]
+if [ $# -eq 0 ]
 then
 USAGE
 fi
